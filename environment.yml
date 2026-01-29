@@ -1,0 +1,10 @@
+name: base
+channels:
+  - conda-forge
+dependencies:
+  - conda>=25.11.0
+  - mamba>=2.4.0
+  - pip
+  - python=3.12
+
+prefix: "/users/home/user14/miniforge3"
