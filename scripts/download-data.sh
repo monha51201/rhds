@@ -20,7 +20,7 @@ mkdir -p $resultsdir
             curl -L $url/${filename}.md5 -o $datadir/${filename}.md5
         fi
     done
-} < files.csv
+} < scripts/files.csv
 
 # Navigate to the data directory
 workdir=$(pwd)
@@ -35,4 +35,4 @@ echo "" > ${resultsdir}/md5sums.txt
         echo "Verifying md5sum for $filename"
         md5sum -c ${filename}.md5 >> ${resultsdir}/md5sums.txt
     done
-} < $workdir/files.csv
+} < $workdir/scripts/files.csv
